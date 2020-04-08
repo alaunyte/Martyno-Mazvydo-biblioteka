@@ -1,0 +1,113 @@
+body {
+  background: lightgray;
+  box-sizing: border-box;
+}
+header {
+  background: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+header img {
+  max-width: 40%;
+}
+header a {
+  display: block;
+}
+header nav a {
+  margin: 0 5px 5px;
+}
+main .wrapper {
+  background: white;
+  padding: 20px;
+  margin: 10px 0;
+}
+main .wrapper:hover {
+  box-shadow: 0 0 3px 6px gray;
+  transition: 1s;
+}
+main h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.notification {
+  position: relative;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px 30px 10px 10px;
+  margin: 10px 0;
+  pointer-events: none;
+}
+.notification.red {
+  background-color: #ff7878;
+}
+.notification.green {
+  background-color: #8bcc35
+}
+.notification.display {
+  display: block;
+}
+.notification.nodisplay {
+  display: none;
+}
+.notification::after {
+  content: "\2716";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(0, -50%);
+  pointer-events: all;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  header a {
+    text-align: left;
+  }
+  header img {
+    width: 200px;
+    vertical-align: middle;
+  }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav a {
+    display: inline;
+    padding: 0;
+    margin-right: 15px;
+    font-size: 15px;
+  }
+  header nav a:last-child {
+    margin-right: 0;
+  }
+  .wrapper {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  main .wrapper {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 3px gray;
+  padding: 20px;
+  margin: 20px auto;
+  transition: 1s;
+}
+  main form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  .input-group {
+    width: 49%;
+  }
+  .input-group:nth-child(odd) {
+    margin-right: 2%;
+  }
+  .input-group button {
+    margin-bottom: 1.5em;
+  }
+}
